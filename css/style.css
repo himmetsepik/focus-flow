@@ -1,0 +1,805 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   Variables
+========================== */
+
+:root{
+    --primary:#5B5FEF;
+    --secondary:#7F83FF;
+    --success:#35C759;
+    --danger:#FF4D4F;
+    --warning:#FFB020;
+
+    --bg:#eef2ff;
+    --card:rgba(255,255,255,.65);
+    --text:#1f2937;
+    --text-light:#6b7280;
+
+    --shadow:0 10px 35px rgba(0,0,0,.12);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+}
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:
+    linear-gradient(135deg,#667eea,#764ba2);
+
+    min-height:100vh;
+
+    color:var(--text);
+
+}
+
+/* ==========================
+   Background Blur
+========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    backdrop-filter:blur(60px);
+
+    z-index:-1;
+
+}
+
+/* ==========================
+   General
+========================== */
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:var(--transition);
+
+}
+
+input,
+select{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo h2{
+
+    font-size:2rem;
+
+    color:white;
+
+    letter-spacing:1px;
+
+    font-weight:700;
+
+}
+
+nav button{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.2);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:1.2rem;
+
+}
+
+nav button:hover{
+
+    transform:rotate(25deg) scale(1.08);
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+   Main Layout
+========================== */
+
+main{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:30px;
+
+}
+
+/* ==========================
+   Cards
+========================== */
+
+.card{
+
+    background:var(--card);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================
+   Left Panel
+========================== */
+
+.left-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================
+   Welcome Card
+========================== */
+
+.welcome-card h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:8px;
+
+}
+
+.welcome-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:30px;
+
+}
+
+#date{
+
+    margin-top:15px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+#clock{
+
+    font-size:2.2rem;
+
+    margin-top:10px;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   Right Panel
+========================== */
+
+.right-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    margin:40px 0;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:.9rem;
+
+}
+
+/* ==========================
+   Dark Mode
+========================== */
+
+body.dark{
+
+    --bg:#0f172a;
+
+    --card:rgba(30,41,59,.75);
+
+    --text:#f8fafc;
+
+    --text-light:#cbd5e1;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+}
+
+body.dark .logo h2{
+
+    color:white;
+
+}
+
+body.dark .card{
+
+    color:white;
+
+}
+
+body.dark input,
+body.dark select{
+
+    background:#1e293b;
+
+    color:white;
+
+    border:1px solid #334155;
+
+}
+
+body.dark button{
+
+    color:white;
+
+}
+
+.timer{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+.timer-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.timer-buttons button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.timer-buttons button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   Toast Notification
+========================== */
+
+.toast-container{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    z-index:9999;
+
+}
+
+.toast{
+
+    min-width:260px;
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-weight:500;
+
+    transform:translateX(120%);
+
+    opacity:0;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+    opacity:1;
+
+}
+
+.toast.success{
+
+    background:#22c55e;
+
+}
+
+.toast.error{
+
+    background:#ef4444;
+
+}
+
+.toast.warning{
+
+    background:#f59e0b;
+
+}
+
+.toast.info{
+
+    background:#3b82f6;
+
+}
+
+.priority{
+
+    display:inline-block;
+
+    margin-top:6px;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.priority.düşük{
+    background:#22c55e;
+}
+
+.priority.orta{
+    background:#f59e0b;
+}
+
+.priority.yüksek{
+    background:#ef4444;
+}
+
+.completed{
+
+    text-decoration:line-through;
+
+    opacity:.6;
+
+}
+
+.empty-task{
+
+    text-align:center;
+
+    color:#999;
+
+    padding:40px 0;
+
+    font-size:15px;
+
+}
+
+.task-input{
+
+    display:flex;
+
+    gap:12px;
+
+    margin:25px 0;
+
+}
+
+.task-input input{
+
+    flex:1;
+
+    padding:14px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:15px;
+
+}
+
+.task-input select{
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+}
+
+.task-input button{
+
+    padding:14px 24px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+#addTaskBtn{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+
+#addTaskBtn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.task-card{
+
+    min-height:350px;
+
+}
+
+.stat{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:15px 0;
+
+}
+footer{
+
+    margin-top:80px;
+
+    padding-bottom:30px;
+
+}
+main{
+
+grid-template-columns:330px 850px;
+
+}
+.empty-task{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:180px;
+
+    color:#888;
+
+    font-size:18px;
+
+}
+
+header{
+
+    padding:20px 0;
+
+}
+
+.task{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+    margin:15px 0;
+
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.task:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.task-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.task-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.task-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.task-buttons button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.edit{
+
+    background:#fbbf24;
+
+}
+
+.delete{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.edit:hover,
+.delete:hover{
+
+    transform:scale(1.08);
+
+}
+
+.task input[type="checkbox"]{
+
+    width:22px;
+
+    height:22px;
+
+    cursor:pointer;
+
+}
+
+.task h4{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin:0;
+
+}
+
+.priority{
+
+    width:fit-content;
+
+    padding:4px 12px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.priority.düşük{
+
+    background:#22c55e;
+
+}
+
+.priority.orta{
+
+    background:#f59e0b;
+
+}
+
+.priority.yüksek{
+
+    background:#ef4444;
+
+}
+
+.task-list{
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+    margin-top:20px;
+
+    padding-right:5px;
+
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Productivity Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>FocusFlow</h2>
+        </div>
+
+        <nav>
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sol Panel -->
+        <section class="left-panel">
+
+            <div class="card welcome-card">
+                <h2>Hoş Geldin 👋</h2>
+                <p>Bugün hedeflerine odaklan.</p>
+
+                <div id="date"></div>
+                <div id="clock"></div>
+            </div>
+
+            <div class="card pomodoro-card">
+                <h3>🍅 Pomodoro</h3>
+
+                <div class="timer">
+                    <span id="minutes">25</span>
+                    :
+                    <span id="seconds">00</span>
+                </div>
+
+                <div class="timer-buttons">
+                    <button id="startBtn">Başlat</button>
+                    <button id="pauseBtn">Duraklat</button>
+                    <button id="resetBtn">Sıfırla</button>
+                </div>
+            </div>
+
+            <div class="card stats-card">
+                <h3>İstatistikler</h3>
+
+                <div class="stat">
+                    <span>Toplam Görev</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Tamamlanan</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Başarı</span>
+                    <strong id="successRate">%0</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Sağ Panel -->
+        <section class="right-panel">
+
+            <div class="card task-card">
+
+                <div class="task-header">
+                    <h2>Görevlerim</h2>
+
+                    <button id="addTaskBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        Yeni Görev
+                    </button>
+                </div>
+
+                <div class="task-input">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Yeni görev ekle..."
+                    >
+
+                    <select id="priority">
+                        <option>Düşük</option>
+                        <option>Orta</option>
+                        <option>Yüksek</option>
+                    </select>
+
+                    <button id="saveTask">
+                        Ekle
+                    </button>
+
+                </div>
+
+                <ul id="taskList">
+
+                    <!-- Örnek -->
+
+                    <li class="task">
+                        <div class="task-info">
+                            <input type="checkbox">
+
+                            <span>HTML Dashboard Tasarla</span>
+                        </div>
+
+                        <div class="task-actions">
+                            <button>
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Himmet Şepik • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

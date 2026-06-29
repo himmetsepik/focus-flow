@@ -1,0 +1,162 @@
+/* ==========================
+   Fade In
+========================== */
+
+@keyframes fadeIn {
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.card{
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* ==========================
+   Floating Cards
+========================== */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.welcome-card{
+
+    animation:
+    fadeIn .8s ease,
+    floating 6s ease-in-out infinite;
+
+}
+
+/* ==========================
+   Button Hover
+========================== */
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ==========================
+   Task Animation
+========================== */
+
+.task{
+
+    animation:fadeIn .5s ease;
+
+}
+
+/* ==========================
+   Pulse
+========================== */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+#startBtn:hover{
+
+    animation:pulse .8s infinite;
+
+}
+
+/* ==========================
+   Rotate
+========================== */
+
+#themeBtn i{
+
+    transition:.4s;
+
+}
+
+#themeBtn:hover i{
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================
+   Input Focus
+========================== */
+
+input:focus,
+select:focus{
+
+    transform:scale(1.02);
+
+}
+
+/* ==========================
+   Task Hover
+========================== */
+
+.task{
+
+    transition:.3s;
+
+}
+
+.task:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================
+   Smooth Loading
+========================== */
+
+body{
+
+    animation:fadeIn .8s ease;
+
+}
