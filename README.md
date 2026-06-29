@@ -17,5 +17,6 @@ A modern productivity dashboard built with HTML, CSS and JavaScript.
 - CSS3
 - JavaScript (ES6)
 
-## Screenshots
+## 📸 Screenshot
 
+![FocusFlow Screenshot](screenshots/screenshot0001.png)
