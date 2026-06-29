@@ -23,4 +23,4 @@ A modern productivity dashboard built with HTML, CSS and JavaScript.
 
 ## 🚀 Live Demo
 
-https://himmetsepik.github.io/focus-flow/
+[🔗 View Live Demo](https://himmetsepik.github.io/focus-flow/)
